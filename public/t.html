@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+
+
+<html itemscope itemtype="http://schema.org/QAPage" class="html__responsive">
+
+    <head>
+
+        <title>jquery - Lumen ajax post - Stack Overflow</title>
+
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        <script src="/jquery.min.js"></script>
+    </head>
+    <body class="question-page unified-theme">
+        <button type="button" onclick="a()">点击</button>
+
+        <script>
+
+            function a() {
+                var urlb = 'http://www.local2.com:82/api/shop/customer/info';
+                //var urlb = 'https://test.brand-api.patozon.net/api/shop/customer/info';
+                var vip3 = {
+                    "store_customer_id": 56,
+                    "store_id": 1,
+                    "account": "BIGAMPLOCC804@GMAIL.COM",
+                };
+                vip3 = JSON.stringify(vip3);
+                jQuery.ajax({
+                    type: "POST",
+                    url: urlb,
+                    dataType: 'json',
+                    data: vip3, // serializes the form's elements.
+                    contentType: 'application/json',
+                    success: function (data)
+                    {
+                        alert(data.code);
+                        if (data.code == 1) {
+
+                        }
+                    }
+                });
+            }
+
+        </script>
+
+    </body>
+</html>

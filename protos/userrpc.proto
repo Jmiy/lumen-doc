@@ -1,0 +1,21 @@
+syntax = "proto3";
+package App.UserRpc;
+
+
+service User{
+  rpc UserLogin(LoginInfo) returns (UserInfo) {}
+}
+
+message LoginInfo{
+  string loginname= 1;
+  string password= 2;
+}
+
+
+message UserInfo{
+ int32 code= 1;
+  string err_msg= 2;
+  string token= 3;
+  int32 userid= 4;
+  string username= 5;
+}

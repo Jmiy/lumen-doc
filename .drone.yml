@@ -1,0 +1,28 @@
+---
+kind: pipeline
+name: dev
+
+steps:
+  - name: code-analysis
+    image: aosapps/drone-sonar-plugin
+    settings:
+      sonar_host: http://sonar.patozon.net
+      sonar_token: 90cee6ca1a79e9bf0a41242301a5ff9b52ba1112
+      showProfiling: true
+    when:
+      branch:
+        - master
+        - develop
+        - release/dev
+      event:
+        - push
+
+
+trigger:
+  when:
+    branch:
+      - master
+      - develop
+      - release/dev
+    event:
+      - push
