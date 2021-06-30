@@ -1,0 +1,16 @@
+#/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+/nbproject
+#/app/Http/Controllers/TestController.php
+/resources/views/emails/test
+/doc
+/app/Http/Controllers/DocController.php
+/storage/laravels.conf
+/storage/laravels.pid
+/storage/laravels-timer-process.pid
+/storage/laravels-custom-processes.pid
+/public/ueditor
+/public/swoole
